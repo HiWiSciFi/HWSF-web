@@ -22,16 +22,13 @@ export class CodeBlockComponent implements OnInit {
 	ngAfterContentInit(): void {
 		if (this.content === undefined) return;
 
-		// strip html
-		let code: any = this.content.nativeElement.textContent || this.content.nativeElement.innerText || "";
-
 		switch(this.lang) {
 			case "js":
 			case "javascript":
 			case "ts":
 			case "typescript":
 				console.log("ts");
-				this.codeColoring_ts(code);
+				this.codeColoring_ts(this.content.nativeElement);
 				break;
 			case "j":
 			case "java":
@@ -53,36 +50,20 @@ export class CodeBlockComponent implements OnInit {
 		}
 	}
 
-	codeColoring_ts(code: string): void {
+	codeColoring_ts(code: Element): void {
 		console.log(code);
 
-		let concatCode: string = "";
-		
-		let htmlIgnore: boolean = false;
-		let ignore: boolean = false;
+		let concatCode: string = "<code class=\"codeBlock\">";
 		let cString: boolean = false;
-		for (let i: number = 0; i < code.length; i++) {
-			let character: string = code.slice(i, (i+1 >= code.length) ? undefined : i+1);
-			if (!ignore && !htmlIgnore) {
-				switch (character) {
-					case "\\":
-						ignore = true;
-						break;
-					case "<":
-						htmlIgnore = true;
-						break;
-					default:
-						concatCode += character;
-						break;
-				}
-			} else if (!ignore) {
-				if (character === ">") {
-					htmlIgnore = false;
-				}
-			} else if (!htmlIgnore) {
-				ignore = false;
-			}
+
+		for (let i: number = 0; i < code.innerHTML.length; i++) {
+			let character: string = code.innerHTML.slice(i, (i+1 >= code.innerHTML.length) ? undefined : i+1);
+			concatCode += character;
+			console.log(concatCode);
 		}
+		concatCode += "</code>";
+		code.innerHTML = concatCode;
+		console.log(code.innerHTML);
 	}
 
 	codeColoring_java(code: string): void {

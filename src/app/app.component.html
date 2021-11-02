@@ -1,17 +1,10 @@
 <h1>{{title}}</h1>
-that is code: <code class="codeIL">This is code.</code>
-that is a code block: 
-<p>
-	<code class="codeB">
-		cd my-app<br>
-		ng serve --open
-	</code>
-</p>
-<p>
-	<app-code-block lang="js">
-		<div #code>
-			yeet this<br>
-			yeet that
-		</div>
-	</app-code-block>
-</p>
+Here's some code: <code class="codeIL">This is code.</code>
+Here's a code block:
+<pre>
+<app-code-block lang="js"><div #code>
+function f(input: string) {{'{'}}
+	console.log("Hello World!");
+{{'}'}}
+</div></app-code-block>
+</pre>

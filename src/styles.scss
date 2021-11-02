@@ -15,7 +15,19 @@ body {
 	background-color: rgb(37, 37, 37);
 }
 
-code {
+.codeBlock {
+	font-family: Roboto Mono, monospace;
+	font-size: 90%;
+	background-color: rgb(55, 55, 55);
+	border-radius: 8px;
+	
+	padding: 30px;
+	display: block;
+
+	color:rgb(37, 200, 37);
+}
+
+/*code {
 	font-family: Roboto Mono, monospace;
 	font-size: 90%;
 	background-color: rgb(55, 55, 55);
@@ -34,7 +46,7 @@ code {
 	@extend code;
 	padding: 4px;
 	display: inline-block;
-}
+}*/
 
 /* everywhere else */
 * {
