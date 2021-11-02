@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+/* Application-wide Styles */
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 250%;
+}
+
+h2, h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: lighter;
+}
+
+body {
+	margin: 2em;
+	background-color: rgb(37, 37, 37);
+}
+
+code {
+	font-family: Roboto Mono, monospace;
+	font-size: 90%;
+	background-color: rgb(55, 55, 55);
+	border-radius: 8px;
+}
+
+.codeB {
+	@extend code;
+	padding: 30px;
+	display: block;
+
+	color:rgb(37, 200, 37);
+}
+
+.codeIL {
+	@extend code;
+	padding: 4px;
+	display: inline-block;
+}
+
+/* everywhere else */
+* {
+	color: rgb(220, 220, 220);
+	font-family: Arial, Helvetica, sans-serif;
+}
