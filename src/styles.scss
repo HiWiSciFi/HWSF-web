@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 /* Application-wide Styles */
+
 h1 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 250%;
@@ -13,6 +14,8 @@ h2, h3 {
 body {
 	margin: 2em;
 	background-color: rgb(37, 37, 37);
+	color: rgb(220, 220, 220);
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .codeBlock {
@@ -47,9 +50,3 @@ body {
 	padding: 4px;
 	display: inline-block;
 }*/
-
-/* everywhere else */
-* {
-	color: rgb(220, 220, 220);
-	font-family: Arial, Helvetica, sans-serif;
-}

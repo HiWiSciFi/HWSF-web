@@ -53,7 +53,7 @@ export class CodeBlockComponent implements OnInit {
 	codeColoring_ts(code: Element): void {
 		console.log(code);
 
-		let concatCode: string = "<code class=\"codeBlock\">";
+		let concatCode: string = "<div class=\"codeBlock\">";
 		let cString: boolean = false;
 
 		for (let i: number = 0; i < code.innerHTML.length; i++) {
@@ -61,7 +61,7 @@ export class CodeBlockComponent implements OnInit {
 			concatCode += character;
 			console.log(concatCode);
 		}
-		concatCode += "</code>";
+		concatCode += "</div>";
 		code.innerHTML = concatCode;
 		console.log(code.innerHTML);
 	}
